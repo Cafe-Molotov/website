@@ -1,6 +1,5 @@
 <script setup>
 const carouselItems = [
-    'terras.jpg',
     'https://picsum.photos/640/640?random=1',
     'https://picsum.photos/640/640?random=2',
     'https://picsum.photos/640/640?random=3',
@@ -16,7 +15,7 @@ const carouselItems = [
             <NuxtImg src="hero.jpg" class="rounded-lg" />
         </div>
         
-        <UCarousel ref="carousel" v-slot="{ item }" arrows dots loop :items="carouselItems" :ui="{ item: 'basis-1/4' }" class="mt-4 mb-4">
+        <UCarousel ref="carousel" v-slot="{ item }" dots loop :items="carouselItems" :ui="{ item: 'basis-1/3' }" class="mt-4 mb-4">
             <img :src="item" class="rounded-lg">
         </UCarousel>
         
@@ -39,16 +38,32 @@ const carouselItems = [
                         Of je nu een student met een beperkt budget bent of een doorgewinterde connaisseur,
                         op onze drankkaart vind je iets om van te houden zonder veel geld uit te geven.
                     </p>
+
+                    <div class="mt-4 flex flex-col gap-4">
+                        <ULink to="https://www.facebook.com/molotov.cafe/" class="flex">
+                            <UIcon name="i-simple-icons-facebook" class="size-8" />
+                            <span class="ml-2 text-xl">Café Molotov</span>
+                        </ULink>
+
+                        <ULink to="https://www.instagram.com/molotovgent/" class="flex">
+                            <UIcon name="i-simple-icons-instagram" class="size-8" />
+                            <span class="ml-2 text-xl">@molotovgent</span>
+                        </ULink>
+
+                        <ULink to="mailto:info@cafemolotov.be" class="flex">
+                            <UIcon name="i-simple-icons-gmail" class="size-8" />
+                            <span class="ml-2 text-xl">info@cafemolotov.be</span>
+                        </ULink>
+                    </div>
                 </div>
 
-                <div class="w-full">
-                    <NuxtImg src="vroeger.jpg" class="mt-4 rounded-xs" />
-                </div>
+                <iframe width="600" height="450" style="border:0" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDssO3AfU9RluJ4EW7PzjkBJ2yDka6DUrU&q=Café+MOLOTOV" class="mt-4 max-w-full shrink-0"></iframe>
             </div>
 
         <USeparator class="h-16" />
 
-            <h2 id="drinks">Dranken</h2>
+            <h2 id="drinks" class="text-3xl font-bold">Dranken</h2>
     </UContainer>
 </template>
 
