@@ -10,8 +10,15 @@ const carouselItems = [
 
 <template>
     <UContainer>
-        <div>
-            <h1 class="text-4xl font-bold">Eigenzinnig cafeetje met optredens, tuinterras en democratische prijzen</h1>
+        <div class="relative">
+            <div class="top-8 left-8 absolute flex flex-col gap-4 w-2/3">
+                <h1 class="text-lg md:text-6xl font-bold text-neutral-200 uppercase">Eigenzinnig cafeetje met optredens, tuinterras en democratische prijzen</h1>
+                <ULink to="#about" class="mr-auto flex text-neutral-400 hover:text-neutral-200">
+                    <UIcon name="material-symbols:location-on" class="size-8" />
+                    <span class="ml-2 max-w-1/2 md:text-2xl font-bold">Voetweg 48, 9000 Gent</span>
+                </ULink>
+            </div>
+            
             <NuxtImg src="hero.jpg" class="rounded-lg" />
         </div>
         
@@ -23,15 +30,15 @@ const carouselItems = [
 
             <h2 id="about" class="text-3xl font-bold">Over ons</h2>
             
-            <div class="md:flex gap-16">
+            <div class="md:flex gap-16 text-justify">
                 <div>
-                    <p class="mt-4 text-lg text-jusify">
+                    <p class="mt-4 md:text-lg">
                         Welkom bij Molotov, waar elke avond een avontuur wacht om zich te ontvouwen.
                         Gelegen in het hart van Gent zijn we niet zomaar een bar.
                         We zijn een toevluchtsoord voor mensen die op zoek zijn naar iets anders.
                     </p>
 
-                    <p class="mt-4 text-lg text-jusify">
+                    <p class="mt-4 md:text-lg">
                         Wij zijn van mening dat aan goede tijden geen hoog prijskaartje mag hangen.
                         Daarom zijn we er trots op dat we democratische prijzen kunnen aanbieden die
                         kwaliteitsdranken en entertainment voor iedereen toegankelijk maken.
@@ -40,19 +47,19 @@ const carouselItems = [
                     </p>
 
                     <div class="mt-4 flex flex-col gap-4">
-                        <ULink to="https://www.facebook.com/molotov.cafe/" class="flex">
-                            <UIcon name="i-simple-icons-facebook" class="size-8" />
-                            <span class="ml-2 text-xl">Café Molotov</span>
+                        <ULink to="https://www.facebook.com/molotov.cafe/" class="mr-auto flex">
+                            <UIcon name="i-simple-icons-facebook" class="size-6" />
+                            <span class="ml-2">Café Molotov</span>
                         </ULink>
 
-                        <ULink to="https://www.instagram.com/molotovgent/" class="flex">
-                            <UIcon name="i-simple-icons-instagram" class="size-8" />
-                            <span class="ml-2 text-xl">@molotovgent</span>
+                        <ULink to="https://www.instagram.com/molotovgent/" class="mr-auto flex">
+                            <UIcon name="i-simple-icons-instagram" class="size-6" />
+                            <span class="ml-2">@molotovgent</span>
                         </ULink>
 
-                        <ULink to="mailto:info@cafemolotov.be" class="flex">
-                            <UIcon name="i-simple-icons-gmail" class="size-8" />
-                            <span class="ml-2 text-xl">info@cafemolotov.be</span>
+                        <ULink to="mailto:info@cafemolotov.be" class="mr-auto flex">
+                            <UIcon name="i-simple-icons-gmail" class="size-6" />
+                            <span class="ml-2">info@cafemolotov.be</span>
                         </ULink>
                     </div>
                 </div>
