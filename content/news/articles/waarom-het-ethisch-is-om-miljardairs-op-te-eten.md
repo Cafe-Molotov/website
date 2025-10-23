@@ -1,0 +1,5 @@
+# Waarom het ethisch is om miljardairs op te eten
+
+Laten we eerlijk zijn: de planeet kan de immense CO2-uitstoot niet langer aan. Terwijl wij ons best doen om plastic rietjes te vermijden en schuldgevoelens krijgen van een lange douche, vliegt de gemiddelde miljardair vrolijk rond in z’n privéjet alsof de klimaatcrisis niet bestaat. En ja, voor hen is dat waarschijnlijk ook zo!
+
+Wist je dat de rijkste 1% verantwoordelijk is voor zo’n 15% van de wereldwijde uitstoot? Terwijl wij massaal onze thermostaten lager zetten en op de fiets springen, zijn zij bezig de aarde te roosteren met hun superjachten, megavilla’s en eindeloze vliegreizen. Dus ja, misschien is het tijd voor drastischer maatregelen. Als je écht je ecologische voetafdruk wilt verkleinen, waarom niet meteen beginnen bij de grootste vervuilers? Het idee om miljardairs op te eten klinkt misschien extreem, maar geloof me, er zitten heel wat voordelen aan!
