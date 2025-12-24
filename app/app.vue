@@ -1,58 +1,74 @@
 <script setup lang="ts">
+import { nl, en } from '@nuxt/ui/locale'
 import type { NavigationMenuItem } from '@nuxt/ui'
 
-const navItems = ref<NavigationMenuItem[]>([
-  {
-    label: 'Home',
-    icon: 'i-lucide-house',
-    to: '/',
-    children: [
-      {
-        label: 'Over ons',
-        icon: 'el:group',
-        to: '/#about'
-      },
-      {
-        label: 'Dranken',
-        icon: 'lucide-lab:wine-glass-bottle',
-        to: '/#drinks'
-      },
-    ]
-  },
-  {
-    label: 'News',
-    icon: 'i-lucide-book-open-text',
-    to: '/news',
-    children: [
-      {
-        // Ideally this would be filled up dynamically with the latest few posts.
+const { locale, setLocale } = useI18n()
+const locales = { nl, en }
 
-        label: 'Latest post',
-        icon: 'i-lucide-file-text',
-        description: 'This description is just an example.',
-        to: '/'
-      },
-      {
-        label: 'Molotov krant',
-        icon: 'i-lucide-file-text',
-        to: '/'
-      }
-    ]
-  },
-  {
-    label: 'Events',
-    icon: 'i-lucide-calendar',
-    to: '/events'
-  }
-
-  // Social media
-  // Language
-])
+const navItems = computed<NavigationMenuItem[]>(() => [
+    {
+        label: 'Home',
+        icon: 'i-lucide-house',
+        to: '/',
+        children: [
+            {
+                label: $t('navigation.about'),
+                icon: 'el:group',
+                to: '/#about'
+            },
+            {
+                label: $t('navigation.drinks'),
+                icon: 'lucide-lab:wine-glass-bottle',
+                to: '/#drinks'
+            },
+        ]
+    },
+    {
+        label: $t('navigation.events'),
+        icon: 'i-lucide-calendar',
+        to: '/events'
+    },
+    {
+        label: $t('navigation.news'),
+        icon: 'i-lucide-book-open-text',
+        to: '/news',
+        children: [
+            {
+                label: 'Posts',
+                icon: 'i-lucide-file-text',
+                to: '/'
+            },
+            {
+                label: 'Molotov krant',
+                icon: 'i-lucide-file-text',
+                to: '/'
+            }
+        ]
+    }])
 </script>
 
 <template>
-  <UApp>
-    <UNavigationMenu content-orientation="vertical" :items="navItems" class="w-full justify-center" />
-    <NuxtPage />
-  </UApp>
+    <UApp :locale="locales[locale]">
+        <UHeader title="Café Molotov">
+            <UNavigationMenu :items="navItems" content-orientation="vertical" />
+
+            <template #right>
+                <UColorModeButton />
+                <ULocaleSelect :model-value="locale" :locales="Object.values(locales)" @update:model-value="setLocale($event)" />
+            </template>
+
+            <template #body>
+                <UNavigationMenu :items="navItems" orientation="vertical" />
+            </template>
+        </UHeader>
+
+
+        <UMain>
+            <UContainer>
+                <NuxtLayout>
+                    <NuxtPage />
+                </NuxtLayout>
+            </UContainer>
+        </UMain>
+    </UApp>
 </template>
