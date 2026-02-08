@@ -5,8 +5,21 @@
         "events": "Events",
         "news": "News"
     },
+    "hours": {
+        "title": "Opening hours",
+        "open": "Wed - Sat: OPEN at 18:00",
+        "closed": "Sun - Tue: CLOSED"
+    },
+    "events": {
+        "title": "Upcoming events",
+        "description": "Coming soon!™"
+    },
+    "posts": {
+        "title": "Recent posts",
+        "description": "Coming soon!™"
+    },
     "home": {
         "title": "Quirky cafe with performances, garden terrace and democratic prices",
-        "about": "Translation pending"
+        "about": "Welcome to Molotov, where every evening is an adventure waiting to unfold. Located in the heart of Ghent, we're more than just a bar. We're a haven for those looking for something different. We believe that good times shouldn't come at a hefty price. That's why we're proud to offer affordable prices that make quality drinks and entertainment accessible to everyone. Whether you're a student on a budget or a seasoned connoisseur, you'll find something to enjoy on our menu without breaking the bank."
     }
 }
