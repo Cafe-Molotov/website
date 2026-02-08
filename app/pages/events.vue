@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <h1>hey events</h1>
+    <p>Ok rebel</p>
 </template>
 
 <style lang="scss">

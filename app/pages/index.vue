@@ -33,7 +33,10 @@ const carouselItems = [
 
     <h2 id="drinks" class="text-3xl font-bold">{{$t('navigation.drinks')}}</h2>
 
-    <UEmpty title="No drinks found" class="w-full h-[1200px]"/>
+    <div class="flex flex-col md:flex-row gap-4">
+        <NuxtImg src="molokaart.png" class="md:max-w-1/2 rounded-lg" />
+        <NuxtImg src="molokaart2.png" class="md:max-w-1/2 rounded-lg" />
+    </div>
 </template>
 
 <style lang="scss">

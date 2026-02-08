@@ -1,17 +1,7 @@
 <script setup lang="ts">
 import type { PageLink } from '@nuxt/ui';
 
-const hours = ref<String[]>([
-    "Ma: GESLOTEN",
-    "Di: 20u00 - 03u00",
-    "Wo: 16u00 - 03u00",
-    "Do: 16u00 - 03u00",
-    "Vr: 16u00 - 03u00",
-    "Za: 20u00 - 03u00",
-    "Zo: GESLOTEN (behalve bij speciale gelegenheden)"
-])
-
-const links = ref<PageLink[]>([
+const social = ref<PageLink[]>([
     {
         label: 'Café Molotov',
         icon: 'i-simple-icons-facebook',
@@ -30,6 +20,7 @@ const links = ref<PageLink[]>([
         to: 'mailto:info@cafemolotov.be'
     }
 ])
+
 </script>
 
 <template>
@@ -40,23 +31,22 @@ const links = ref<PageLink[]>([
 
         <template #right>
             <UPageAside>
-                <UPageLinks title="Openingsuren" :Links="hours" />
-                <ul>
-                    <li v-for="item in hours">{{ item }}</li>
-                </ul>
+                <UPageLinks :title="$t('hours.title')" />
+                <p>{{ $t('hours.open') }}</p>
+                <p>{{ $t('hours.closed') }}</p>
 
                 <USeparator class="h-4" />
 
-                <UPageLinks title="Social media" :links="links" />
+                <UPageLinks title="Social media" :links="social" />
 
                 <USeparator class="h-4" />
 
-                <UPageLinks title="Upcoming events" />
+                <UPageLinks :title="$t('events.title')" />
                 <p>Coming soon!™</p>
 
                 <USeparator class="h-4" />
 
-                <UPageLinks title="Latest posts" />
+                <UPageLinks :title="$t('posts.title')" />
                 <p>Coming soon!™</p>
             </UPageAside>
         </template>
