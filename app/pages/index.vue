@@ -5,7 +5,7 @@ const carouselItems = [
     'volk1.jpg',
     'volk2.jpg',
     'https://picsum.photos/800/600?random=1'
-]
+];
 </script>
 
 <template>

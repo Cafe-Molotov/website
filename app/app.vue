@@ -2,14 +2,16 @@
 import { nl, en } from '@nuxt/ui/locale'
 import type { NavigationMenuItem, PageLink } from '@nuxt/ui'
 
-const { locale, setLocale } = useI18n()
-const locales = { nl, en }
+const { locale, setLocale } = useI18n();
+const locales = { nl, en };
+
+const localePath = useLocalePath();
 
 const navItems = computed<NavigationMenuItem[]>(() => [
     {
         label: 'Home',
         icon: 'i-lucide-house',
-        to: '/',
+        to: localePath('/'),
         children: [
             {
                 label: $t('navigation.about'),
@@ -26,29 +28,29 @@ const navItems = computed<NavigationMenuItem[]>(() => [
     {
         label: $t('navigation.events'),
         icon: 'i-lucide-calendar',
-        to: '/events',
-        disabled: true
+        to: localePath('/events'),
+        disabled: false
     },
     {
         label: $t('navigation.news'),
         icon: 'i-lucide-book-open-text',
-        to: '/news',
-        disabled: true,
+        to: localePath('/news'),
+        disabled: false,
         children: [
             {
                 label: 'Posts',
                 icon: 'i-lucide-file-text',
-                to: '/news/posts',
-                disabled: true
+                to: localePath('/news/posts'),
+                disabled: false
             },
             {
                 label: 'Molotov krant',
                 icon: 'i-lucide-file-text',
-                to: '/news/newspaper',
-                disabled: true
+                to: localePath('/news/newspaper'),
+                disabled: false
             }
         ]
-    }])
+    }]);
 
     const social = ref<PageLink[]>([
     {
@@ -68,13 +70,13 @@ const navItems = computed<NavigationMenuItem[]>(() => [
         icon: 'material-symbols:mail',
         to: 'mailto:info@cafemolotov.be'
     }
-])
+]);
 </script>
 
 <template>
     <UApp :locale="locales[locale]">
-        <UHeader title="Café Molotov">
-            <UNavigationMenu :items="navItems" highlight />
+        <UHeader title="Café Molotov" :to="localePath('/')">
+            <UNavigationMenu :items="navItems" variant="link" highlight />
 
             <template #right>
                 <UColorModeButton />
@@ -82,7 +84,7 @@ const navItems = computed<NavigationMenuItem[]>(() => [
             </template>
 
             <template #body>
-                <UNavigationMenu :items="navItems" orientation="vertical" />
+                <UNavigationMenu :items="navItems" orientation="vertical" variant="link" />
 
                 <USeparator class="h-4" />
 

@@ -19,7 +19,7 @@ const social = ref<PageLink[]>([
         icon: 'material-symbols:mail',
         to: 'mailto:info@cafemolotov.be'
     }
-])
+]);
 
 </script>
 
