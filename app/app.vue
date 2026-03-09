@@ -29,25 +29,25 @@ const navItems = computed<NavigationMenuItem[]>(() => [
         label: $t('navigation.events'),
         icon: 'i-lucide-calendar',
         to: localePath('/events'),
-        disabled: false
+        disabled: true
     },
     {
         label: $t('navigation.news'),
         icon: 'i-lucide-book-open-text',
         to: localePath('/news'),
-        disabled: false,
+        disabled: true,
         children: [
             {
                 label: 'Posts',
                 icon: 'i-lucide-file-text',
                 to: localePath('/news/posts'),
-                disabled: false
+                disabled: true
             },
             {
                 label: 'Molotov krant',
                 icon: 'i-lucide-file-text',
                 to: localePath('/news/newspaper'),
-                disabled: false
+                disabled: true
             }
         ]
     }]);
@@ -79,7 +79,7 @@ const navItems = computed<NavigationMenuItem[]>(() => [
             <UNavigationMenu :items="navItems" variant="link" highlight />
 
             <template #right>
-                <UColorModeButton />
+                <UColorModeSelect />
                 <ULocaleSelect :model-value="locale" :locales="Object.values(locales)" @update:model-value="setLocale($event)" />
             </template>
 
