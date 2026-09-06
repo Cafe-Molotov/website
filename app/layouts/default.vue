@@ -15,9 +15,9 @@ const social = ref<PageLink[]>([
         target: '_blank'
     },
     {
-        label: 'info@cafemolotov.be',
+        label: 'molotovgent@proton.me',
         icon: 'material-symbols:mail',
-        to: 'mailto:info@cafemolotov.be'
+        to: 'mailto:molotovgent@proton.me'
     }
 ]);
 
