@@ -29,7 +29,6 @@ const navItems = computed<NavigationMenuItem[]>(() => [
         label: $t('navigation.events'),
         icon: 'i-lucide-calendar',
         to: localePath('/events'),
-        disabled: true
     },
     {
         label: $t('navigation.news'),
