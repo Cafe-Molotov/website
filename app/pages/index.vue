@@ -4,7 +4,6 @@ const carouselItems = [
     'soundsystem.jpg',
     'volk1.jpg',
     'volk2.jpg',
-    'https://picsum.photos/800/600?random=1'
 ];
 </script> 
 
@@ -22,7 +21,7 @@ const carouselItems = [
     </div>
     
     <UCarousel ref="carousel" v-slot="{ item }" arrows dots loop :items="carouselItems" :ui="{ item: 'basis-1/3' }" class="z-10">
-        <NuxtImg :src="item" class="rounded-lg" />
+        <NuxtImg :src="item" width="320" height="320" class="rounded-lg" />
     </UCarousel>
     
     <USeparator class="h-4"/>
