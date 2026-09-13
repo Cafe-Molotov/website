@@ -65,9 +65,9 @@ const navItems = computed<NavigationMenuItem[]>(() => [
         target: '_blank'
     },
     {
-        label: 'info@cafemolotov.be',
+        label: 'molotovgent@proton.me',
         icon: 'material-symbols:mail',
-        to: 'mailto:info@cafemolotov.be'
+        to: 'mailto:molotovgent@proton.me'
     }
 ]);
 </script>
